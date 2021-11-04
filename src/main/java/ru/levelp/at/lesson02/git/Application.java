@@ -8,5 +8,6 @@ public class Application {
         System.out.println(String.format("2 + 4 = %d", calculator.sum(2, 4)));
         System.out.println(String.format("6 - 8 = %f", calculator.subtract(6, 8)));
         System.out.println(String.format("2 ^ 10 = %f", calculator.power(2, 10)));
+        System.out.println(String.format("6 * 8 = %f", calculator.multiply(6.0, 8.0)));
     }
 }
