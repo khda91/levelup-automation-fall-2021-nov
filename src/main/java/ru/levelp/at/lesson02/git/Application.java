@@ -11,8 +11,7 @@ public class Application {
         System.out.println(String.format("6 * 8 = %f", calculator.multiply(6.0, 8.0)));
         System.out.println(String.format("6 / 8 = %f", calculator.divide(6.0, 8.0)));
         System.out.println(String.format("6 / 0 = %f", calculator.divide(6.0, 0.0)));
-        System.out.println(String.format("6 / 1 = %f", calculator.divide(6, 1)));
+        System.out.println(String.format("6 / 0 = %f", calculator.divide(6, 0)));
         System.out.println(String.format("6 / 3 = %f", calculator.divide(6, 3)));
-        System.out.println(String.format("5! = %d", calculator.factorial(5)));
     }
 }
