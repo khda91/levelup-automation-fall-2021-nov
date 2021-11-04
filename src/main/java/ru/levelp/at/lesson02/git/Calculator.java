@@ -30,4 +30,11 @@ public class Calculator {
     public double divide(double a, double b) {
         return a / b;
     }
+
+    public double divide(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException("Divide to zero is prohibited");
+        }
+        return divide((double) a, (double) b);
+    }
 }
