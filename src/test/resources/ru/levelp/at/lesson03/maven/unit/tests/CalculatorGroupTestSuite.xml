@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Calculator Group Tests Suite">
+
+  <test name="Calculator Positive Test">
+    <groups>
+      <run>
+        <include name="POSITIVE"/>
+      </run>
+    </groups>
+
+    <packages>
+      <package name="ru.levelp.at.lesson03.maven.unit.tests.testng.groups"/>
+    </packages>
+  </test>
+
+  <test name="Calculator Negative Test">
+    <groups>
+      <run>
+        <exclude name="POSITIVE"/>
+      </run>
+    </groups>
+
+    <packages>
+      <package name="ru.levelp.at.lesson03.maven.unit.tests.testng.groups"/>
+    </packages>
+  </test>
+
+</suite>
