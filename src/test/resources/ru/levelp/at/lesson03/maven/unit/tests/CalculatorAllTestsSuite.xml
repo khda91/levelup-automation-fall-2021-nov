@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Calculator All Tests Suite">
+
+  <test name="Calculator All Tests">
+    <packages>
+      <package name="ru.levelp.at.lesson03.maven.unit.tests.testng.functional"/>
+    </packages>
+  </test>
+
+</suite>
