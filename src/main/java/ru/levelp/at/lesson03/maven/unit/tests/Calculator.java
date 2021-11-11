@@ -47,4 +47,18 @@ public class Calculator {
 
         return res;
     }
+
+    public int[] fibonachi(int a) {
+        if (a < 2) {
+            throw new IllegalArgumentException(String.format("a should greater than 2"));
+        }
+        int[] fibs = new int[a];
+        fibs[0] = 0;
+        fibs[1] = 1;
+        for (int i = 2; i < a; i++) {
+            int res = fibs[i - 2] + fibs[i - 1];
+            fibs[i] = res;
+        }
+        return fibs;
+    }
 }

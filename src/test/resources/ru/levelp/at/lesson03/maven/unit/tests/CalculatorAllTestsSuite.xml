@@ -3,7 +3,7 @@
 
   <test name="Calculator All Tests">
     <packages>
-      <package name="ru.levelp.at.lesson03.maven.unit.tests.testng.functional"/>
+      <package name="ru.levelp.at.lesson03.maven.unit.tests.testng.*"/>
     </packages>
   </test>
 

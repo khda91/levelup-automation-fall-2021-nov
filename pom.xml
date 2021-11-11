@@ -12,6 +12,7 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <suite.root.directory>${project.basedir}/src/test/resources/ru/levelp/at/lesson03/maven/unit/tests</suite.root.directory>
 
     <testng.version>7.4.0</testng.version>
     <commons-io.version>2.11.0</commons-io.version>
@@ -20,6 +21,38 @@
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
   </properties>
+
+  <profiles>
+    <profile>
+      <id>calculator-all-tests</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+
+      <properties>
+        <suite.xml.name>CalculatorAllTestsSuite.xml</suite.xml.name>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>calculator-all-splitted-tests</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+
+      <properties>
+        <suite.xml.name>CalculatorAllTestsSplittedSuite.xml</suite.xml.name>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>calculator-group-tests</id>
+
+      <properties>
+        <suite.xml.name>CalculatorGroupTestSuite.xml</suite.xml.name>
+      </properties>
+    </profile>
+  </profiles>
 
   <dependencies>
     <dependency>
@@ -79,6 +112,17 @@
             </execution>
           </executions>
         </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>${suite.root.directory}/${suite.xml.name}</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
 
     </plugins>
   </build>

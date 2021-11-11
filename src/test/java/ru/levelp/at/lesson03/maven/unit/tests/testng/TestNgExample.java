@@ -1,4 +1,4 @@
-package ru.levelp.at.lesson03.maven.unit.tests;
+package ru.levelp.at.lesson03.maven.unit.tests.testng;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
