@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.levelp.at.lesson03.maven.unit.tests.testng.groups.constants.GroupNameConstant;
 
-public class CalculatorSubtractTest extends AbstractBaseCalculatorTest {
+public class TestCalculatorSubtract extends AbstractBaseCalculatorTest {
 
     @Test(groups = {GroupNameConstant.POSITIVE_GROUP})
     public void subtractTest() {

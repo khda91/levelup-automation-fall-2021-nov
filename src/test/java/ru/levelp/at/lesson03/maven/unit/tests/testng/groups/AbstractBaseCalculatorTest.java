@@ -33,7 +33,7 @@ public abstract class AbstractBaseCalculatorTest {
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() {
-        System.out.println(this.getClass().getSimpleName() + " set up method");
+        System.out.println(this.getClass().getCanonicalName() + " set up method");
         calculator = new Calculator();
     }
 
