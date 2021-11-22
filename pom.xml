@@ -20,6 +20,7 @@
     <selenium-java.version>4.0.0</selenium-java.version>
     <assertj-core.version>3.21.0</assertj-core.version>
     <webdrivermanager.version>5.0.3</webdrivermanager.version>
+    <javafaker.version>1.0.2</javafaker.version>
 
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -89,6 +90,13 @@
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
       <version>${assertj-core.version}</version>
+    </dependency>
+
+    <!-- Faker -->
+    <dependency>
+      <groupId>com.github.javafaker</groupId>
+      <artifactId>javafaker</artifactId>
+      <version>${javafaker.version}</version>
     </dependency>
 
   </dependencies>
