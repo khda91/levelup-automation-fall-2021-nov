@@ -21,6 +21,7 @@
     <assertj-core.version>3.21.0</assertj-core.version>
     <webdrivermanager.version>5.0.3</webdrivermanager.version>
     <javafaker.version>1.0.2</javafaker.version>
+    <rest-assured.version>4.4.0</rest-assured.version>
 
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -99,6 +100,12 @@
       <version>${javafaker.version}</version>
     </dependency>
 
+    <!-- Rest Assured -->
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <version>${rest-assured.version}</version>
+    </dependency>
   </dependencies>
 
   <build>
