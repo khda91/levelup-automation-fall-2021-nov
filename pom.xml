@@ -22,6 +22,7 @@
     <webdrivermanager.version>5.0.3</webdrivermanager.version>
     <javafaker.version>1.0.2</javafaker.version>
     <rest-assured.version>4.4.0</rest-assured.version>
+    <lombok.version>1.18.22</lombok.version>
 
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -105,6 +106,14 @@
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
       <version>${rest-assured.version}</version>
+    </dependency>
+
+    <!-- Lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 
