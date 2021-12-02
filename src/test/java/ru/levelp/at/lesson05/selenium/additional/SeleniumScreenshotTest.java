@@ -18,7 +18,7 @@ public class SeleniumScreenshotTest extends SeleniumBaseTest {
 
     @Test
     public void screenshotTest() {
-            SleepUtil.sleep(2000);
+        SleepUtil.sleep(2000);
         WebElement element = driver.findElement(xpath("//*[contains(@data-pid, 'RatesCalcMain')]"));
 
         new Actions(driver)

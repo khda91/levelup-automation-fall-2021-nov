@@ -35,11 +35,11 @@ public class Person implements Serializable {
 
     @Override
     public String toString() {
-        return "Person{" +
-            "firstName='" + firstName + '\'' +
-            ", lastName='" + lastName + '\'' +
-            ", age=" + age +
-            ", address=" + address +
-            '}';
+        return "Person{"
+            + "firstName='" + firstName + '\''
+            + ", lastName='" + lastName + '\''
+            + ", age=" + age
+            + ", address=" + address
+            + '}';
     }
 }

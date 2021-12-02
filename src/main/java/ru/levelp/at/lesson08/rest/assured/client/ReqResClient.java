@@ -22,11 +22,12 @@ public class ReqResClient {
      * @param userId - id of required user
      *
      * @return general Rest-Assured response which could be cast to
-     * <li>
-     *     <ul>{@link ru.levelp.at.lesson08.rest.assured.model.SingleUserDataResponse}
-     *     - if success</ul>
-     *     <ul>#link_to_error_reponse class - if error</ul>
-     * </li>
+     *
+     *     <li>
+     *         <ul>{@link ru.levelp.at.lesson08.rest.assured.model.SingleUserDataResponse}
+     *         - if success</ul>
+     *         <ul>#link_to_error_reponse class - if error</ul>
+     *     </li>
      */
     public Response getUser(String userId) {
         return when()

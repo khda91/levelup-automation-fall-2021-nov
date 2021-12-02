@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Selenium Jenkins All Tests Suite">
+
+  <test name="Jenkins All Tests">
+    <packages>
+      <package name="ru.levelp.at.lesson10.jenkins.*"/>
+    </packages>
+  </test>
+
+</suite>
