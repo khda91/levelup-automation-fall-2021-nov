@@ -12,7 +12,7 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <suite.root.directory>${project.basedir}/src/test/resources/ru/levelp/at/lesson03/maven/unit/tests</suite.root.directory>
+    <suite.root.directory>${project.basedir}/src/test/resources</suite.root.directory>
 
     <testng.version>7.4.0</testng.version>
     <commons-io.version>2.11.0</commons-io.version>
@@ -36,7 +36,7 @@
       </activation>
 
       <properties>
-        <suite.xml.name>CalculatorAllTestsSuite.xml</suite.xml.name>
+        <suite.xml.name>/ru/levelp/at/lesson03/maven/unit/tests/CalculatorAllTestsSuite.xml</suite.xml.name>
       </properties>
     </profile>
 
@@ -47,7 +47,7 @@
       </activation>
 
       <properties>
-        <suite.xml.name>CalculatorAllTestsSplittedSuite.xml</suite.xml.name>
+        <suite.xml.name>/ru/levelp/at/lesson03/maven/unit/tests/CalculatorAllTestsSplittedSuite.xml</suite.xml.name>
       </properties>
     </profile>
 
@@ -55,7 +55,15 @@
       <id>calculator-group-tests</id>
 
       <properties>
-        <suite.xml.name>CalculatorGroupTestSuite.xml</suite.xml.name>
+        <suite.xml.name>/ru/levelp/at/lesson03/maven/unit/tests/CalculatorGroupTestSuite.xml</suite.xml.name>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>selenium-jenkins-example</id>
+
+      <properties>
+        <suite.xml.name>/ru/levelp/at/lesson10/jenkins/selenium/SeleniumJenkinsTestsSuite.xml</suite.xml.name>
       </properties>
     </profile>
   </profiles>

@@ -12,12 +12,13 @@ public class CalculatorExternalDataProvider {
             {5, 120}
         };
     }
+
     @DataProvider(name = "Fibonachi Data Provider")
     public Object[][] fibonachiDataProvider() {
         return new Object[][] {
-            {3, new int[]{0, 1, 1}},
-            {5, new int[]{0, 1, 1, 2, 3}},
-            {8, new int[]{0, 1, 1, 2, 3, 5, 8, 13}},
+            {3, new int[] {0, 1, 1}},
+            {5, new int[] {0, 1, 1, 2, 3}},
+            {8, new int[] {0, 1, 1, 2, 3, 5, 8, 13}},
         };
     }
 }

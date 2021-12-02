@@ -32,20 +32,20 @@ public class UserBugRedLoginRegistrationPage {
         PageUtils.open(driver, PAGE_RELATIVE_URL);
     }
 
-//    public static void inputTextToUsernameTextField(String username) {
-//        driver.findElement(By.xpath("//form[contains(@action, 'register')]//input[@name='email']"));
-//        PageUtils.sendKeysToWebElement(driver, usernameTextField, username);
-//    }
-//
-//    public static void inputTextToUserEmailTextField(String email) {
-//        PageUtils.sendKeysToWebElement(driver, userEmailTextField, email);
-//    }
-//
-//    public static void inputTextToUserPasswordTextField(String password) {
-//        PageUtils.sendKeysToWebElement(driver, userPasswordTextField, password);
-//    }
-//
-//    public static void clickToRegisterButton() {
-//        PageUtils.clickToWebElement(driver, registerButton);
-//    }
+    //    public static void inputTextToUsernameTextField(String username) {
+    //        driver.findElement(By.xpath("//form[contains(@action, 'register')]//input[@name='email']"));
+    //        PageUtils.sendKeysToWebElement(driver, usernameTextField, username);
+    //    }
+    //
+    //    public static void inputTextToUserEmailTextField(String email) {
+    //        PageUtils.sendKeysToWebElement(driver, userEmailTextField, email);
+    //    }
+    //
+    //    public static void inputTextToUserPasswordTextField(String password) {
+    //        PageUtils.sendKeysToWebElement(driver, userPasswordTextField, password);
+    //    }
+    //
+    //    public static void clickToRegisterButton() {
+    //        PageUtils.clickToWebElement(driver, registerButton);
+    //    }
 }
