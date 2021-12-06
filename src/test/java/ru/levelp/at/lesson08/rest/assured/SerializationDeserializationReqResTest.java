@@ -51,8 +51,10 @@ public class SerializationDeserializationReqResTest {
         SingleUserDataResponse actualResponse = RestAssured
             .given()
             .spec(requestSpecification)
+            .pathParam("id", "2")
+            .pathParam("other", "smth")
             .when()
-            .get("/users/2")
+            .get("/users/{id}/{other}")
             .then()
             .spec(responseSpecification)
             .statusCode(HttpStatus.SC_OK)

@@ -23,6 +23,8 @@
     <javafaker.version>1.0.2</javafaker.version>
     <rest-assured.version>4.4.0</rest-assured.version>
     <lombok.version>1.18.22</lombok.version>
+    <allure.version>2.17.0</allure.version>
+    <aspectj.version>1.9.7</aspectj.version>
 
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -64,6 +66,22 @@
 
       <properties>
         <suite.xml.name>/ru/levelp/at/lesson10/jenkins/selenium/SeleniumJenkinsTestsSuite.xml</suite.xml.name>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>maven-surefire-report-example</id>
+
+      <properties>
+        <suite.xml.name>/ru/levelp/at/lesson11/allure/SeleniumMavenSurefireReporterSuite.xml</suite.xml.name>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>allure-report-example</id>
+
+      <properties>
+        <suite.xml.name>/ru/levelp/at/lesson11/allure/SeleniumAllureReporterSuite.xml</suite.xml.name>
       </properties>
     </profile>
   </profiles>
@@ -123,6 +141,13 @@
       <version>${lombok.version}</version>
       <scope>provided</scope>
     </dependency>
+
+    <!-- Allure TestNg -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-testng</artifactId>
+      <version>${allure.version}</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -174,13 +199,37 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M5</version>
         <configuration>
+          <argLine>
+            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+          </argLine>
           <suiteXmlFiles>
             <suiteXmlFile>${suite.root.directory}/${suite.xml.name}</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+          </dependency>
+        </dependencies>
       </plugin>
 
     </plugins>
   </build>
+
+  <reporting>
+    <excludeDefaults>true</excludeDefaults>
+    <plugins>
+      <plugin>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-maven</artifactId>
+        <version>2.10.0</version>
+        <configuration>
+          <reportVersion>${allure.version}</reportVersion>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
 
 </project>
