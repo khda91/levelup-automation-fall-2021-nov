@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Selenium Maven Surefire Report Tests Suite">
+
+  <test name="Maven Surefire Report Tests">
+    <packages>
+      <package name="ru.levelp.at.lesson11.allure.*"/>
+    </packages>
+  </test>
+
+</suite>

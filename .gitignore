@@ -3,3 +3,5 @@ target
 *.iml
 .gradle
 build
+.allure
+**/allure-results
