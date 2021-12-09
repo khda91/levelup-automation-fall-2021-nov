@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="String Singleton Suite">
+
+  <test name="String Singleton Tests">
+    <packages>
+      <package name="ru.levelp.at.lesson12.design.pattern.singleton.*"/>
+    </packages>
+  </test>
+
+</suite>
